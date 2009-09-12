@@ -86,7 +86,7 @@ context "SolidState" do
     end
 
     specify "errors out on invalid state choice" do
-      should.raise InvalidStateError do
+      should.raise SolidState::InvalidStateError do
         @stateful.change_state! :fail_state
       end
 
@@ -141,7 +141,7 @@ context "SolidState" do
       state.current_state.should.equal :another
       state.add(5, 2).should.equal 1
 
-      should.not.raise InvalidStateError do
+      should.not.raise SolidState::InvalidStateError do
         state.change_state! :next
       end
     end
