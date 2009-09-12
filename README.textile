@@ -1,11 +1,6 @@
 h2. Solid State - Stateful Ruby objects with a twist
 
-Most stateful libraries that exist for Ruby deal with keeping track of a state variable,
-which is a symbol or string stating what state said object is currently in. This works
-well with libraries like ActiveRecord where you're usually simply interested in data.
-But what if you want to change the functionality according to what state the object is in?
-With tools like ActsAsStateMachine, you'll still need to pepper your methods with checks on
-which state the object is in:
+Most stateful libraries that exist for Ruby deal with keeping track of a state variable, which is a symbol or string stating what state said object is currently in. This works well with libraries like ActiveRecord where you're usually simply interested in data.  But what if you want to change the functionality according to what state the object is in?  With tools like ActsAsStateMachine, you'll still need to pepper your methods with checks on which state the object is in:
 
 <pre><code>
   if state == :this
@@ -15,15 +10,13 @@ which state the object is in:
   end
 </code></pre>
 
-Enter *solid_state*. The Ruby state machine library that lets you define state-specific functionality.
-But enough yammering, nothing can describe a system like a simple example.
+Enter *solid_state*. The Ruby state machine library that lets you define state-specific functionality.  But enough yammering, nothing can describe a system like a simple example.
 
 Please note: this library is *not* a full state machine. See the *Notes* section below.
 
 h3. Example
 
-Lets say you have a simple AI that needs to act differently according to what state it's currently in.
-We'll define the states :persue, :scared, and :idle.
+Lets say you have a simple AI that needs to act differently according to what state it's currently in.  We'll define the states :persue, :scared, and :idle.
 
 <pre><code>
   class AI
@@ -51,8 +44,7 @@ We'll define the states :persue, :scared, and :idle.
   end
 </code></pre>
 
-This one example shows almost the entirity of solid_state's simple API. Include the SolidState module,
-define your states, and optionally set a starting state. To using this class is simple:
+This one example shows almost the entirity of solid_state's simple API. Include the SolidState module, define your states, and optionally set a starting state. To using this class is simple:
 
 <pre><code>
   ai = AI.new
@@ -94,17 +86,13 @@ This also works seemlessly with subclasses. For example:
 
 h3. Notes
 
-To be fair, other state machine libraries do offer this functionality. I'm do this to be a learning experience
-and to make as bare-bones a state machine system as I can, for when you don't need a full state machine
-(transitions, validation, transition direction enforcement, etc).
+To be fair, other state machine libraries do offer this functionality. I'm do this to be a learning experience and to make as bare-bones a state machine system as I can, for when you don't need a full state machine (transitions, validation, transition direction enforcement, etc).
 
-If you're looking for a fully comprehensive state machine library, "state_machine":http://github.com/pluginaweek/state_machine" is the most detailed I've found yet and probably can do anything you need to do.
+If you're looking for a fully comprehensive state machine library, "state_machine":http://github.com/pluginaweek/state_machine is the most detailed I've found yet and probably can do anything you need to do.
 
 h3. Possible Issues
 
-Individual states are implemented underneath as inner Classes that subclass the current Class. This means
-they get access to all public and protected methods in the outer Class, but at the same time if there
-are state methods with the same name as methods on the outer class, the state methods will never get called.
+Individual states are implemented underneath as inner Classes that subclass the current Class. This means they get access to all public and protected methods in the outer Class, but at the same time if there are state methods with the same name as methods on the outer class, the state methods will never get called.
 
 h3. Project Info
 
