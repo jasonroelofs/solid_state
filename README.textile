@@ -22,7 +22,7 @@ Lets say you have a simple AI that needs to act differently according to what st
   class AI
     include SolidState
 
-    state :idle do
+    state :persue do
       def update
         # Chase the target!
       end
@@ -77,10 +77,10 @@ This also works seemlessly with subclasses. For example:
 
   ai = Scavanger.new
   ai.current_state            # => :idle
-  ai.change_state!(:scavange)
+  ai.change_state! :scavange
   ai.update                   # => Scavaging!
 
-  a.change_state!(:idle)
+  a.change_state! :idle
   a.update
 </code></pre>
 
