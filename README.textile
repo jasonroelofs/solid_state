@@ -88,6 +88,8 @@ h3. Notes
 
 To be fair, other state machine libraries do offer this functionality. I'm do this to be a learning experience and to make as bare-bones a state machine system as I can, for when you don't need a full state machine (transitions, validation, transition direction enforcement, etc).
 
+A similar library to this is "state-ology":http://github.com/banister/state-ology which uses the Mixology gem to pull Modules in and out of the system when you change states. Functionality wise it's pretty much equal to solid_state, but I wanted to build it in pure Ruby.
+
 If you're looking for a fully comprehensive state machine library, "state_machine":http://github.com/pluginaweek/state_machine is the most detailed I've found yet and probably can do anything you need to do.
 
 h3. Possible Issues
