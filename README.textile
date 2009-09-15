@@ -16,13 +16,13 @@ Please note: this library is *not* a full state machine. See the *Notes* section
 
 h3. Example
 
-Lets say you have a simple AI that needs to act differently according to what state it's currently in.  We'll define the states :persue, :scared, and :idle.
+Lets say you have a simple AI that needs to act differently according to what state it's currently in.  We'll define the states :pursue, :scared, and :idle.
 
 <pre><code>
   class AI
     include SolidState
 
-    state :persue do
+    state :pursue do
       def update
         # Chase the target!
       end
@@ -52,7 +52,7 @@ This one example shows almost the entirity of solid_state's simple API. Include 
   ai.update                 # => looking for a target...
 
   # Target found!
-  ai.change_state! :persue
+  ai.change_state! :pursue
   ai.update                 # => Rawr! Chasing target
 
   # I'm hurt!
