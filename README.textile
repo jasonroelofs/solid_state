@@ -98,9 +98,9 @@ Individual states are implemented underneath as inner Classes that subclass the 
 
 h3. Project Info
 
-Install via gems: gem install solid_state --source http://gemcutter.org
+Install via gems: gem install solid_state
 
-Code hosted on Github: http://github.com/jameskilton/solid_state
+Code hosted on Github: http://github.com/jasonroelofs/solid_state
 
-Issues on Github: http://github.com/jameskilton/solid_state/issues
+Issues on Github: http://github.com/jasonroelofs/solid_state/issues
 

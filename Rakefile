@@ -14,11 +14,10 @@ begin
     gem.name = "solid_state"
     gem.summary = %Q{Stateful Ruby objects}
     gem.description = %Q{Add simple states to your classes with different functionality across states.}
-    gem.email = "jameskilton@gmail.com"
-    gem.homepage = "http://github.com/jameskilton/solid_state"
+    gem.email = "jasongroelofs@gmail.com"
+    gem.homepage = "http://github.com/jasonroelofs/solid_state"
     gem.authors = ["Jason Roelofs"]
     gem.add_development_dependency "test-spec"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
